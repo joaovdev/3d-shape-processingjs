@@ -26,20 +26,6 @@ var createCuboid = function(x, y, z, w, h, d) {
     
 var shape1 = createCuboid(-120, -20, -20, 240, 40, 40);
 
-// Rotate shape around the z-axis
-var rotateZ3D = function(theta, nodes) {
-    var sinTheta = Math.sin(theta);
-    var cosTheta = Math.cos(theta);
-    
-    for (var n = 0; n < nodes.length; n++) {
-        var node = nodes[n];
-        var x = node[0];
-        var y = node[1];
-        node[0] = x * cosTheta - y * sinTheta;
-        node[1] = y * cosTheta + x * sinTheta;
-    }
-};
-
 var rotateY3D = function(theta, nodes) {
     var sinTheta = Math.sin(theta);
     var cosTheta = Math.cos(theta);
